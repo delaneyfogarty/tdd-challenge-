@@ -23,7 +23,7 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints, multiplyBySeven, divideThenMultiply
+    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray
 } from '../functions.js';
 
 test('this test should add exclamation points to the strings', (expect) => {
@@ -81,6 +81,19 @@ test('this test will take the quotient of number1 and number2 and multiply it by
     expect.equal(actual3, expected3, 'this will return the product of number3 multiplied by the quotient of number1 and number2');
 });
 
+test('this test will take firstNumber, secondNumber, and thirdNumber and put them into an array', (expect) => {
+    const expected = [1, 2, 3];
+    const actual = returnAsAnArray(1, 2, 3);
+    expect.deepEqual(actual, expected);
 
+    const expected2 = [7, 8, 9];
+    const actual2 = returnAsAnArray(7, 8, 9);
+    expect.deepEqual(actual2, expected2);
+
+    const expected3 = [10, 11, 12];
+    const actual3 = returnAsAnArray(10, 11, 12);
+    expect.deepEqual(actual3, expected3);
+
+});
 
 
