@@ -23,7 +23,7 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray
+    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString
 } from '../functions.js';
 
 test('this test should add exclamation points to the strings', (expect) => {
@@ -92,8 +92,21 @@ test('this test will take firstNumber, secondNumber, and thirdNumber and put the
 
     const expected3 = [10, 11, 12];
     const actual3 = returnAsAnArray(10, 11, 12);
-    expect.deepEqual(actual3, expected3);
+    expect.deepEqual(actual3, expected3, 'this will return an array of three chosen numbers');
 
 });
 
+test('this test will put given numbers into a string', (expect) => {
+    const expected = '854';
+    const actual = returnAsAString([8], [5], [4]);
+    expect.equal(actual, expected);
+
+    const expected2 = '799';
+    const actual2 = returnAsAString([7], [9], [9]);
+    expect.equal(actual2, expected2);
+
+    const expected3 = '111';
+    const actual3 = returnAsAString([1], [1], [1]);
+    expect.equal(actual3, expected3, 'this will return a string of 3 chosen numbers');
+});
 
