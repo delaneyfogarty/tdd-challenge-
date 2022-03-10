@@ -11,12 +11,15 @@ Output:
 'bunny rabbit!!!'
 
 */
-function addExclamationPoints('bunny rabbit') {
-    return `bunny rabbit!!!`
+
+export function addExclamationPoints(string) {
+    return string;
 }
-export function addExclamationPoints() {
-    return true;
-}
+
+
+//export function addExclamationPoints() {
+//   return true;
+//}
 
 // This function should take in a number and multiply it by seven
 
