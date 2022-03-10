@@ -145,3 +145,4 @@ test('this fxn will get the last item from an array no matter its length', (expe
     const actual = getLastItem(['orange', 'lemon', 'grapes', 'kiwi']);
     expect.equal(actual, expected, 'this fxn will return the last item in an array');
 });
+
