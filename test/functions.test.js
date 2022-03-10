@@ -23,7 +23,7 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting
+    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem
 } from '../functions.js';
 
 test('this fxn should add exclamation points to the strings', (expect) => {
@@ -117,10 +117,25 @@ test('this fxn will add two numbers and make that your lucky number!', (expect) 
 
     const expected2 = 'Hello! Your lucky number for the day is 7!';
     const actual2 = makeLuckyGreeting(3, 4);
-    expect.equal(actual, expected);
+    expect.equal(actual2, expected2);
 
     const expected3 = 'Hello! Your lucky number for the day is 37!';
     const actual3 = makeLuckyGreeting(32, 5);
+    expect.equal(actual3, expected3, 'this fxn will return a string with your lucky number equalling the sum of two numbers');
+
+});
+
+test('this fxn will generate the second item in an array', (expect) => {
+    const expected = 2;
+    const actual = getSecondItem([1, 2, 3]);
     expect.equal(actual, expected);
+
+    const expected2 = 1;
+    const actual2 = getSecondItem([0, 1, 2]);
+    expect.equal(actual2, expected2);
+
+    const expected3 = 7;
+    const actual3 = getSecondItem([6, 7, 8]);
+    expect.equal(actual3, expected3, 'this fxn will return the second item of an array');
 
 });
