@@ -11,7 +11,9 @@ Output:
 'bunny rabbit!!!'
 
 */
-
+function addExclamationPoints('bunny rabbit') {
+    return `bunny rabbit!!!`
+}
 export function addExclamationPoints() {
     return true;
 }
