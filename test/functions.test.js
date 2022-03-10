@@ -23,7 +23,7 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints,
+    addExclamationPoints, multiplyBySeven
 } from '../functions.js';
 
 test('this test should add exclamation points to the strings', (expect) => {
@@ -44,6 +44,12 @@ test('this test should add exclamation points to the strings', (expect) => {
     expect.equal(actual3, expected3, 'this will return five exclamation points after princey boi');
 
 });
+
+test('this test should multiply a given number by 7', (expect) => {
+    const expected = 
+
+})
+
 
 
 
