@@ -23,10 +23,10 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString
+    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting
 } from '../functions.js';
 
-test('this test should add exclamation points to the strings', (expect) => {
+test('this fxn should add exclamation points to the strings', (expect) => {
     const expected = 'bunny rabbit!!!';
 
     const actual = addExclamationPoints('bunny rabbit' + '!!!');
@@ -45,7 +45,7 @@ test('this test should add exclamation points to the strings', (expect) => {
 
 });
 
-test('this test should multiply a given number by 7', (expect) => {
+test('this fxn should multiply a given number by 7', (expect) => {
     const expected = 28;
 
     const actual = multiplyBySeven(4);
@@ -61,7 +61,7 @@ test('this test should multiply a given number by 7', (expect) => {
     expect.equal(actual3, expected3, 'this will return the product of a chosen number and 7');
 });
 
-test('this test will take the quotient of number1 and number2 and multiply it by number3', (expect) => {
+test('this fxn will take the quotient of number1 and number2 and multiply it by number3', (expect) => {
     const expected = 10;
 
     const actual = divideThenMultiply(8, 4, 5);
@@ -81,7 +81,7 @@ test('this test will take the quotient of number1 and number2 and multiply it by
     expect.equal(actual3, expected3, 'this will return the product of number3 multiplied by the quotient of number1 and number2');
 });
 
-test('this test will take firstNumber, secondNumber, and thirdNumber and put them into an array', (expect) => {
+test('this fxn will take firstNumber, secondNumber, and thirdNumber and put them into an array', (expect) => {
     const expected = [1, 2, 3];
     const actual = returnAsAnArray(1, 2, 3);
     expect.deepEqual(actual, expected);
@@ -96,7 +96,7 @@ test('this test will take firstNumber, secondNumber, and thirdNumber and put the
 
 });
 
-test('this test will put given numbers into a string', (expect) => {
+test('this fxn will put given numbers into a string', (expect) => {
     const expected = '854';
     const actual = returnAsAString([8], [5], [4]);
     expect.equal(actual, expected);
@@ -110,3 +110,17 @@ test('this test will put given numbers into a string', (expect) => {
     expect.equal(actual3, expected3, 'this will return a string of 3 chosen numbers');
 });
 
+test('this fxn will add two numbers and make that your lucky number!', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12!';
+    const actual = makeLuckyGreeting(4, 8);
+    expect.equal(actual, expected);
+
+    const expected2 = 'Hello! Your lucky number for the day is 7!';
+    const actual2 = makeLuckyGreeting(3, 4);
+    expect.equal(actual, expected);
+
+    const expected3 = 'Hello! Your lucky number for the day is 37!';
+    const actual3 = makeLuckyGreeting(32, 5);
+    expect.equal(actual, expected);
+
+});
