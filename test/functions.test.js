@@ -139,3 +139,4 @@ test('this fxn will generate the second item in an array', (expect) => {
     expect.equal(actual3, expected3, 'this fxn will return the second item of an array');
 
 });
+
