@@ -23,7 +23,7 @@ const { test, skip } = QUnit;
 //});
 
 import {
-    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, getLastItem
+    addExclamationPoints, multiplyBySeven, divideThenMultiply, returnAsAnArray, returnAsAString, makeLuckyGreeting, getSecondItem, getLastItem, getRandomNumber
 } from '../functions.js';
 
 test('this fxn should add exclamation points to the strings', (expect) => {
@@ -146,3 +146,8 @@ test('this fxn will get the last item from an array no matter its length', (expe
     expect.equal(actual, expected, 'this fxn will return the last item in an array');
 });
 
+test('this fxn will select a random number between 1 and 5', (expect) => {
+    const actual = getRandomNumber();
+    const expected = [0, 1, 2, 3, 4, 5].includes(actual);
+    expect.equal(true, expected);
+});
